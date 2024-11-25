@@ -6,7 +6,8 @@ with right:
 
 # Adiciona espaço vertical
 st.write("")
-st.write("")
+
+
 
 st.title('Negócio')
 

@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 
+
 dados = pd.read_csv('dados/preco_brent.csv')
 dados = dados[dados['data'] >= '2000-01-01']
 forecast = pd.read_csv('dados/last_forecast.csv')
@@ -59,19 +60,17 @@ left, cent, right = st.columns(3)
 with right:
     st.image('imagens/fiap_simbolo.png')
 
+st.write("")
+    
+
 #título
 st.title('Análise Petróleo Brent')
 
 #layout do aplicativo
-tab1, tab2 = st.tabs(['Previsão', 'Análise Histórica'])
+tab1, tab2 = st.tabs(['Análise Histórica', 'Previsão'])
 
 
 with tab1:
-    #série prevista
-    st.plotly_chart(fig_previsao, use_container_width=True)
-    st.markdown('O gráfico acima apresenta a previsão para as próximas 5 cotações do barril de petróleo Brent, gerada pelo modelo AutoARIMA')
-
-with tab2:
     #série
     st.plotly_chart(fig, use_container_width=True)
     st.markdown(
@@ -92,3 +91,8 @@ with tab2:
         ''',
         unsafe_allow_html=True
     )
+
+with tab2:
+    #série prevista
+    st.plotly_chart(fig_previsao, use_container_width=True)
+    st.markdown('O gráfico acima apresenta a previsão para as próximas 5 cotações do barril de petróleo Brent, gerada pelo modelo AutoARIMA')

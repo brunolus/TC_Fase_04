@@ -6,7 +6,7 @@ with right:
 
 # Adiciona espaço vertical
 st.write("")
-st.write("")
+
 
 st.title('TC 04 - Análise de Projeção Petróleo')
 
