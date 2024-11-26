@@ -4,9 +4,9 @@ import plotly.express as px
 
 
 
-dados = pd.read_csv('dados/preco_brent.csv')
+dados = pd.read_csv('dados/preco_hist_brent.csv')
 dados = dados[dados['data'] >= '2000-01-01']
-forecast = pd.read_csv('dados/last_forecast.csv')
+forecast = pd.read_csv('dados/previsao_atual.csv')
 
 #tipando coluna de data
 dados['data'] = pd.to_datetime(dados['data'])

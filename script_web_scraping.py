@@ -65,7 +65,7 @@ if resposta_brent.status_code == 200:
     dados_brent_novos.rename(columns={'Data': 'data', 'Preço - petróleo bruto - Brent (FOB)': 'preco'}, inplace=True)
 
     # Verifica se o arquivo CSV existe, e o carrega se necessário
-    caminho_arquivo_brent = 'dados/preco_brent.csv'
+    caminho_arquivo_brent = 'dados/preco_hist_brent.csv'
     try:
         dados_brent_existente = pd.read_csv(caminho_arquivo_brent)
     except FileNotFoundError:
@@ -106,7 +106,7 @@ if resposta_dolar.status_code == 200:
     dados_dolar_novos = dados_dolar_novos[dados_dolar_novos['data'] >= '1987-05-20']
 
     # Verifica se o arquivo CSV existe, e o carrega se necessário
-    caminho_arquivo_dolar = 'dados/preco_dolar.csv'
+    caminho_arquivo_dolar = 'dados/preco_hist_dolar.csv'
     try:
         dados_dolar_existente = pd.read_csv(caminho_arquivo_dolar)
     except FileNotFoundError:
@@ -127,7 +127,7 @@ else:
 # Calculando o erro do modelo (W-MAPE)
 try:
     # Verifica se já existe um arquivo de previsões anteriores para comparar
-    ultima_previsao = pd.read_csv('dados/last_forecast.csv')
+    ultima_previsao = pd.read_csv('dados/previsao_atual.csv')
     erro_wmape = wmape(dados_atualizados_brent['preco'].head().values, ultima_previsao['preco_previsto'].values)
     #update_database_wmape(erro_wmape)
 except FileNotFoundError:
@@ -153,5 +153,5 @@ previsao['preco_previsto'] = [int(n * 100) / 100 for n in previsao['preco_previs
 previsao = previsao.sort_values('data', ascending=False)
 
 # Salvando as previsões no arquivo CSV
-caminho_previsao = 'dados/last_forecast.csv'
+caminho_previsao = 'dados/previsao_atual.csv'
 previsao.to_csv(caminho_previsao, index=False)
