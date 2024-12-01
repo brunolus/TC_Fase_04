@@ -196,7 +196,7 @@ with tab3:
     )
 
     # Exibição do valor WMAPE calculado
-    wmape_arima = 0.0105487536907552  # Este é o valor calculado com base no modelo.
+    wmape_arima = 0.008687833480261866  # Este é o valor calculado com base no modelo.
     st.markdown(f"**WMAPE do modelo ARIMA:** {wmape_arima:.15}")
 
     # Conclusões
