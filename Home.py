@@ -30,3 +30,17 @@ st.markdown(
 left, cent, right = st.columns(3)
 with cent:
    st.image('imagens/barril_petroleo.png', width=250)
+
+# Espaçamento antes dos nomes
+st.write("")
+
+# Adiciona os membros do grupo
+st.subheader("Integrantes do Grupo 44")
+st.write(
+    """
+    - André Vinícius de Oliveira
+    - Bruno Lustosa Sola
+    - Roberto Carty
+    - Stephanie Ribeiro Ornelas Coelho Lima
+    """
+)
