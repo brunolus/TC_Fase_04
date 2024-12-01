@@ -216,10 +216,37 @@ with tab4:
     st.subheader("Implementação")
     st.markdown(
         """
-        A última etapa foi a criação de um Produto Mínimo Viável (MVP) utilizando Streamlit. Isso permitiu:
-        
-        - **Dashboard Interativo:** Visualizar os dados históricos e os insights extraídos.
-        - **Previsão de Preços:** Oferecer uma interface onde o usuário pode prever preços futuros.
-        - **Deploy:** O projeto foi disponibilizado no Streamlit Community Cloud, garantindo acessibilidade.
+        Nesta seção, detalhamos as etapas realizadas para implementar este projeto no Streamlit, abrangendo desde a análise de dados até o deploy final.
+
+        1. **Análise e Preparação de Dados**  
+           Os dados históricos do preço do petróleo Brent e do dólar foram extraídos de fontes confiáveis e processados no ambiente Google Colab. Durante esta etapa:  
+           - Foram realizados tratamentos para remoção de dados inconsistentes e preenchimento de valores nulos.  
+           - Os dados foram formatados em arquivos CSV e carregados no repositório do projeto para facilitar o acesso e reutilização.  
+
+        2. **Criação do Modelo de Machine Learning**  
+           Utilizamos o modelo **AutoARIMA**, implementado com a biblioteca `StatsForecast`, para prever os preços do petróleo Brent. As etapas foram:  
+           - O modelo foi treinado no ambiente Colab com dados históricos de 2000 a 2024.  
+           - O arquivo resultante (`auto_arima_brent.joblib`) foi exportado para ser utilizado diretamente no projeto Streamlit.  
+
+        3. **Desenvolvimento da Interface no Streamlit**  
+           A aplicação foi desenvolvida no framework **Streamlit**, e a estrutura do menu foi organizada em quatro seções principais:  
+           - **Home**: Apresentação geral do projeto e equipe.  
+           - **Negócio**: Explicação sobre o mercado de petróleo e seus fatores de influência.  
+           - **Projeto**: Detalhamento das etapas realizadas, incluindo a implementação.  
+           - **MVP - Petróleo Brent**: Interface interativa com gráficos de análise histórica e previsão de preços.  
+
+           No desenvolvimento:  
+           - Gráficos gerados no Colab foram exportados como imagens e integrados ao projeto para enriquecer a experiência visual.  
+           - O modelo treinado foi carregado para fazer previsões diretamente na aplicação.  
+
+        4. **Deploy da Aplicação**  
+           O código-fonte foi versionado e armazenado em um repositório no GitHub. Para o deploy, seguimos os passos:  
+           - A aplicação foi vinculada ao **Streamlit Community Cloud**, permitindo deploy automático a partir do repositório GitHub.  
+           - A aplicação pode ser acessada diretamente online, garantindo acessibilidade para visualização e interação.  
+
+        5. **Integração com o Power BI**  
+           Os dados processados no Colab foram exportados em formato CSV e integrados ao Power BI Cloud. Essa etapa permitiu a criação de um painel interativo, complementando a visualização no Streamlit com análises aprofundadas.
+
+        Com essa implementação, o projeto fornece uma experiência completa, desde a análise de dados até a previsão interativa de preços, acessível para qualquer dispositivo conectado à internet.
         """
     )
