@@ -67,7 +67,7 @@ with tab2:
     """
     )
     
-    st.image("imagens\Analise_exploratorio_histograma_001.png", caption="Histograma - Análise Exploratória dos Dados")
+    st.image("imagens/Analise_exploratorio_histograma_001.png", caption="Histograma - Análise Exploratória dos Dados")
 
     st.markdown(
     """
@@ -85,7 +85,7 @@ with tab2:
     """
     )
 
-    st.image("imagens\Decomposicao_temporal_decomposicao_001.png", caption="Decomposição - Série de Preços do Petróleo Brent")
+    st.image("imagens/Decomposicao_temporal_decomposicao_001.png", caption="Decomposição - Série de Preços do Petróleo Brent")
 
     st.markdown(
     """
@@ -93,7 +93,7 @@ with tab2:
     """
     )
 
-    st.image("imagens\Decomposicao_temporal_sezonalidade_001.png", caption="Sazonalidade - Série de Preços do Petróleo Brent")
+    st.image("imagens/Decomposicao_temporal_sezonalidade_001.png", caption="Sazonalidade - Série de Preços do Petróleo Brent")
 
     st.markdown(
     """
