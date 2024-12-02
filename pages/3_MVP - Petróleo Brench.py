@@ -73,24 +73,6 @@ tab1, tab2 = st.tabs(['Análise Histórica', 'Previsão'])
 with tab1:
     #série
     st.plotly_chart(fig, use_container_width=True)
-    st.markdown(
-        '''
-        <div style='text-align: justify;'>
-            <p>
-                O petróleo Brent sofreu oscilações significativas em três momentos recentes:
-            </p>
-            <ul>
-                <li>2008: Durante a crise financeira global, desencadeada pela especulação imobiliária nos EUA (subprime), houve uma queda drástica na demanda e no preço do petróleo. Após o colapso do Lehman Brothers, os investidores abandonaram commodities como o petróleo, buscando liquidez, enquanto o consumo global de combustíveis despencava.</li>
-                <li>2014: A superprodução, especialmente do petróleo de xisto dos EUA, combinada com a menor demanda na Europa e Ásia, derrubou os preços. A OPEP recusou reduzir a produção para preservar sua participação de mercado, prejudicando economias dependentes do petróleo, como Venezuela, Rússia e Irã.</li>
-                <li>2020: A pandemia da COVID-19 provocou uma redução global no consumo de petróleo devido ao isolamento social, resultando em queda de preços. Divergências entre a Arábia Saudita e a Rússia sobre cortes na produção levaram a uma guerra de preços, com a Arábia Saudita aumentando a oferta e reduzindo drasticamente os valores.</li>
-            </ul>
-            <p>
-                Esses eventos mostram como fatores econômicos, geopolíticos e crises globais afetam diretamente o mercado do petróleo Brent.
-            </p>
-        </div>
-        ''',
-        unsafe_allow_html=True
-    )
 
 with tab2:
     #série prevista
